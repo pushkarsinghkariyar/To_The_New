@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+  $("p").on("click",function(){
+  	$("p").append("<button id='b1'>click</button>");
+  	$("#b1").on("click",function(){
+  		alert("button is clicked");
+  	});
+  });
+    });
+    </script>
+</head>
+<body>
+<p>
+click to append
+</p>
+
+
+
+</body>
+</html>

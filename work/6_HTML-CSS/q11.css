@@ -1,0 +1,112 @@
+body{
+	background-color: #0b000a;
+
+}
+
+header{
+	color: white;
+	margin: 0px 30px;
+	border: 1px solid white;
+	padding: 5px 50px;
+}
+
+header>h1{
+	margin-left: 20px;
+}
+.navdiv{
+	background-color: grey;
+	margin-left: 42px;
+	padding: 5px;
+	width: 940px;
+	
+	
+}
+
+a{
+	color: white;
+	text-decoration: none;
+	margin: 0px 5px;
+}
+
+#mainpart{
+	background-color: white;
+	height: 850px;
+	margin-left: 30px;
+	margin-right:30px;
+
+	
+
+}
+
+.s1{
+	
+background-color: black;
+display: inline-block;
+width: 960px;
+height: 360px;
+
+position: relative;
+top: 5px;
+left: 90px;
+bottom: 5px;
+}
+
+.pt{
+	position: absolute;
+	color: white;
+	top: 45%;
+	left:45%;
+}
+
+.textdiv{
+	background-color: grey;
+	height: 40px;
+	position: relative;
+	left: 90px;
+	top: 5px;
+	bottom: 5px;
+	width: 960px;
+	word-wrap: break-word;
+}
+
+#gal_div{
+	margin-left:55px; 
+}
+.gal_text{
+margin-left: 80px; 
+border-bottom: 1px solid black;
+padding-bottom: 5px;
+width: 750px;
+
+}
+	.photo_div{
+	float: left;
+	height: 315px;
+	position: relative;
+	margin-left: 50px;
+	background-color: black;
+	width: 215px;
+
+}
+
+button{
+		width: 100%;
+		margin-top: 133%;	
+
+	}
+.divsp{
+	color: white;
+	position: absolute;
+	left: 30%;
+	top: 40%
+}
+
+footer{
+	height: 110%;
+	color: white;
+	margin: 0px 30px;
+	background-color: black;
+	border-left:1px solid grey;
+	border-right:1px solid grey;
+}
+

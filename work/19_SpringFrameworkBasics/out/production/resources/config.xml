@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.spring.demo"/>
+
+    <!--<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"/>-->
+    <!--<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"/>-->
+
+    <!--<bean name="databasebean" class="com.spring.demo.Database">-->
+    <!--<property name="port" value="2020"></property>-->
+    <!--<property name="name" value="mydb"></property>-->
+    <!--</bean>-->
+
+
+    <!--<bean name="teabean" class="com.spring.demo.Tea"></bean>-->
+
+    <!--<bean name="expressteabean" class="com.spring.demo.ExpressTea"></bean>-->
+
+    <!--<bean name="restaurantbean" class="com.spring.demo.Restaurant">-->
+        <!--<property name="hotDrink" ref="teabean"></property>-->
+    <!--</bean>-->
+
+
+    <!--<bean name="restaurantbean2" class="com.spring.demo.Restaurant">-->
+        <!--<property name="hotDrink">-->
+            <!--<bean class="com.spring.demo.ExpressTea"></bean>-->
+        <!--</property>-->
+    <!--</bean>-->
+
+
+    <!--<bean name="complexbean" class="com.spring.demo.Complex">-->
+        <!--<property name="list">-->
+            <!--<list>-->
+                <!--<value>1</value>-->
+                <!--<value>2</value>-->
+                <!--<value>3</value>-->
+            <!--</list>-->
+        <!--</property>-->
+
+        <!--<property name="set">-->
+            <!--<set>-->
+                <!--<value>1</value>-->
+                <!--<value>2</value>-->
+                <!--<value>3</value>-->
+                <!--<value>2</value>-->
+            <!--</set>-->
+        <!--</property>-->
+
+        <!--<property name="map">-->
+            <!--<map>-->
+                <!--<entry key="one" value="1"/>-->
+                <!--<entry key="two" value="2"/>-->
+                <!--<entry key="three" value="3"/>-->
+            <!--</map>-->
+        <!--</property>-->
+
+    <!--</bean>-->
+
+
+    <!--<bean name="hotDrink" class="com.spring.demo.Tea"></bean>-->
+    <!--<bean name="restaurantbean3" class="com.spring.demo.Restaurant" autowire="byName"></bean>-->
+
+
+    <!--<bean name="teabean3" class="com.spring.demo.Tea"></bean>-->
+    <!--<bean name="restaurantbean4" class="com.spring.demo.Restaurant" autowire="byType"></bean>-->
+
+
+    <bean name="teabean4" class="com.spring.demo.Tea"></bean>
+
+    <bean name="restaurantbean5" class="com.spring.demo.Restaurant">
+        <constructor-arg name="hotDrink" ref="teabean4"/>
+        <constructor-arg name="temp" value="50"/>
+    </bean>
+
+
+    <!--<bean name="teabean5" class="com.spring.demo.Tea"></bean>-->
+    <!--<bean name="restaurantbean6" class="com.spring.demo.Restaurant" scope="prototype">-->
+        <!--<property name="hotDrink" ref="teabean5"></property>-->
+    <!--</bean>-->
+
+
+    <!--<bean name="teabean6" class="com.spring.demo.Tea"></bean>-->
+    <!--<bean name="restaurantbean7" class="com.spring.demo.Restaurant"></bean>-->
+
+
+
+</beans>

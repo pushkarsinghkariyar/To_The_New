@@ -1,0 +1,42 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="page-header">
+<h1>Bootstrap Descriptive Lists</h1> </div>
+<div class="container">
+
+<p> List without bootstrap class</p>
+<dl>
+  <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+
+<p> List with bootstrap class dl-horizontal:Lines up the terms  and descriptions  in elements side-by-side.</p>
+<dl class="dl-horizontal">
+  <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+<p> List with bootstrap class list-inline:Places all list items on a single line</p>
+<dl class="list-inline">
+  <dt>Coffee</dt>
+    <dd>- black hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drink</dd>
+</dl>
+
+</div>
+
+
+
+</body>
+
+</html>

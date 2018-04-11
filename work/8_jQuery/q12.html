@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $( document ).ready(function() {
+         
+         $("div").on("click",function(){
+
+         	alert("div is clicked");
+         });
+          $("p").on("click",function(e){
+          	e.stopPropagation();
+
+         	alert("p is clicked");
+         });
+         
+
+});
+    </script>
+</head>
+<body>
+<div>
+hello 
+<p>
+	hi 
+</p>
+</div>
+</body>
+</html>

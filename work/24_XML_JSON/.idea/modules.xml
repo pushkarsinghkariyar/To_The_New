@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/XML_JSON.iml" filepath="$PROJECT_DIR$/.idea/modules/XML_JSON.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/XML_JSON_main.iml" filepath="$PROJECT_DIR$/.idea/modules/XML_JSON_main.iml" group="XML_JSON" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/XML_JSON_test.iml" filepath="$PROJECT_DIR$/.idea/modules/XML_JSON_test.iml" group="XML_JSON" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MULTITHREADING.iml" filepath="$PROJECT_DIR$/.idea/modules/MULTITHREADING.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MULTITHREADING_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MULTITHREADING_main.iml" group="MULTITHREADING" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MULTITHREADING_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MULTITHREADING_test.iml" group="MULTITHREADING" />
+    </modules>
+  </component>
+</project>

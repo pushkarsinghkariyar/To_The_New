@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+<div class="page-header">
+<h3> Bootstrap Alerts </h3></div>
+<div class="alert alert-success">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  Success alert being rendered
+
+</div>
+  </div>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="jquery_lib.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+$("#loaddata").click(function(){ 
+$.ajax({url:"abc.json",
+	type:"json",
+	success:function(ajaxresult){
+alert(ajaxresult);
+}});
+});
+});
+</script>
+
+</script>
+<button id="loaddata">click</button>
+<div id="datadiv">
+
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").on("click",function(){
+			//alert($("button").height());
+			var max=0;;
+			$("li").each(function(){
+				if($(this).height()>max){
+					max=$(this).height();
+				}
+			})
+
+			alert("maximum height is : "+max);
+		})
+		
+	})
+</script>
+
+<ul>
+	<li style="height: 20px">20px</li>
+	<li style="height: 15px">15px</li>
+	<li style="height: 25px">25px</li>
+	<li style="height: 40px">40px</li>
+</ul>
+
+<button>click to get maximum height</button>
+</body>
+</html>

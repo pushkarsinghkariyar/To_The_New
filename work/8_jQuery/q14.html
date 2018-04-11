@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#gt').click(function () {
+			$("td").each(function(){
+				var num=parseInt($(this).html());
+				if(num>10){
+					$(this).css("color","blue");
+				}
+			})   
+
+	})
+
+})
+</script>
+<table>
+	
+	<tr><th>marks</th></tr>
+		<tr><td>8</td></tr>
+		<tr><td>15</td></tr>
+		<tr><td>6</td></tr>
+		<tr><td>20</td></tr>
+	
+</table>
+<button id="gt">click</button>
+</body>
+</html>

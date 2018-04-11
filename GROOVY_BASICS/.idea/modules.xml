@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROOVY_BASICS.iml" filepath="$PROJECT_DIR$/.idea/modules/GROOVY_BASICS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROOVY_BASICS_main.iml" filepath="$PROJECT_DIR$/.idea/modules/GROOVY_BASICS_main.iml" group="GROOVY_BASICS" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/GROOVY_BASICS_test.iml" filepath="$PROJECT_DIR$/.idea/modules/GROOVY_BASICS_test.iml" group="GROOVY_BASICS" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SERVLET.iml" filepath="$PROJECT_DIR$/.idea/modules/SERVLET.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SERVLET_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SERVLET_main.iml" group="SERVLET" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SERVLET_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SERVLET_test.iml" group="SERVLET" />
+    </modules>
+  </component>
+</project>

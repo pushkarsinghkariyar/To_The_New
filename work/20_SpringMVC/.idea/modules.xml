@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MVC.iml" filepath="$PROJECT_DIR$/.idea/modules/MVC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MVC_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MVC_main.iml" group="MVC" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MVC_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MVC_test.iml" group="MVC" />
+    </modules>
+  </component>
+</project>

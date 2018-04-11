@@ -1,0 +1,24 @@
+<html>
+<head>
+<title>Jquery Bootcamp</title>
+<script
+type="text/javascript"
+src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+</script>
+</head>
+<body>
+<form action="#">
+First name:
+<input type="text" name="firstname" value="Pushkar">
+<br>
+Last name:
+<input type="text" name="lastname" value="Singh">
+<br>
+<input type="submit" value="Submit">
+</form> <script type="text/javascript">
+$(document).ready(function(){
+$("[type=submit]").attr("disabled","disabled");
+});
+</script>
+</body>
+</html>

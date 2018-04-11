@@ -1,0 +1,35 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="page-header">
+<h1>Bootstrap Typography (Headings)</h1> </div>
+<div class="container">
+<div class="well">
+<h1>I'm Heading1 h1</h1>
+<h2>I'm Heading2 h2</h2>
+<h3>I'm Heading3 h3</h3>
+<h4>I'm Heading4 h4</h4>
+<h5>I'm Heading5 h5</h5>
+<h6>I'm Heading6 h6</h6>
+
+<div class="h1">I'm Heading1 h1</div>
+<div class="h2">I'm Heading2 h2</div>
+<div class="h3">I'm Heading3 h3</div>
+<div class="h4">I'm Heading4 h4</div>
+<div class="h5">I'm Heading5 h5</div>
+<div class="h6">I'm Heading6 h6</div>
+
+
+
+
+</div>
+</div>
+
+
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

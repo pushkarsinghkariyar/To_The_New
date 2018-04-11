@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="AdditionSpec" tests="3" skipped="0" failures="1" errors="0" timestamp="2018-02-28T11:12:09" hostname="Pushkar-Singh" time="0.08">
+  <properties/>
+  <testcase name="canary test" classname="AdditionSpec" time="0.075"/>
+  <testcase name="testSumInts" classname="AdditionSpec" time="0.004">
+    <failure message="groovy.lang.MissingMethodException: No signature of method: Addition.add() is applicable for argument types: (java.lang.Integer, java.lang.Integer) values: [10, 20]&#10;Possible solutions: any(), wait(), find(), wait(long, int), any(groovy.lang.Closure), grep()" type="groovy.lang.MissingMethodException">groovy.lang.MissingMethodException: No signature of method: Addition.add() is applicable for argument types: (java.lang.Integer, java.lang.Integer) values: [10, 20]
+Possible solutions: any(), wait(), find(), wait(long, int), any(groovy.lang.Closure), grep()
+	at AdditionSpec.testSumInts(AdditionSpec.groovy:23)
+</failure>
+  </testcase>
+  <testcase name="testSumStrings" classname="AdditionSpec" time="0.001"/>
+  <system-out><![CDATA[this is canary test
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

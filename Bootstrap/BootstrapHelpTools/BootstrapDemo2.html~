@@ -1,0 +1,11 @@
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+</head>
+
+<body>
+<h1>Including css from directory</h1>
+<script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
