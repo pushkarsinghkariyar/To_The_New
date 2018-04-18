@@ -3,8 +3,6 @@ package subscription
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-import grails.test.mixin.Mock
-import grails.test.mixin.TestFor
 import spock.lang.Specification
 import spock.lang.Unroll
 import topic.Topic

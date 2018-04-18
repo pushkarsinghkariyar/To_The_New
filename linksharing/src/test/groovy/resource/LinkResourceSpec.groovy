@@ -8,7 +8,7 @@ import spock.lang.Unroll
 import topic.Topic
 import user.User
 
-@TestFor(LinkResource)
+//@TestFor(LinkResource)
 class LinkResourceSpec extends Specification {
 
     @Unroll

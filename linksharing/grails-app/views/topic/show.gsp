@@ -179,7 +179,12 @@
                                             <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
                                             <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
                                             <span class="pull-right" style="margin-right: 0px;color: #007efc">
-                                                <a href="${createLink(controller:'resource',action:'downloadDocument',id:resource.resourceId)}">Download</a>
+                                                <g:if test="${resource.isLink}">
+                                                    <a href="${createLink(controller:'resource',action:'showLink',id:resource.resourceId)}">View Link</a>
+                                                </g:if>
+                                                <g:else>
+                                                    <a href="${createLink(controller:'resource',action:'downloadDocument',id:resource.resourceId)}">Download</a>
+                                                </g:else>
                                                 <a href="${createLink(controller: 'resource', action: 'showPost', id: resource.resourceId)}">View Post</a>
                                             </span>
                                         </div>

@@ -8,9 +8,9 @@ import spock.lang.Unroll
 import subscription.Subscription
 import topic.Topic
 import user.User
-
-@TestFor(Topic)
-@Mock([User, Subscription])
+//
+//@TestFor(Topic)
+//@Mock([User, Subscription])
 class TopicSpec extends Specification {
 
     @Unroll
@@ -41,7 +41,7 @@ class TopicSpec extends Specification {
     @Unroll
     void "Topic name should be unique per user"() {
         setup:
-        User user = new User(email: "abc@gmail.com", username: "nitin", password: "password", firstName: "nitin", lastName: "singh", admin: true, active: true, photo: "photo".bytes)
+        User user = new User(email: "abc@gmail.com", username: "pushkar", password: "password", firstName: "pushkar", lastName: "singh", admin: true, active: true, photo: "photo".bytes)
         Topic topic1 = new Topic(name: "Topic1", createdBy: user, visibility: Visibility.PUBLIC)
         Topic topic2 = new Topic(name: "Topic1", createdBy: user, visibility: Visibility.PUBLIC)
 
@@ -68,19 +68,6 @@ class TopicSpec extends Specification {
 
         then:
         result == "Topic1"
-    }
-
-    @Unroll
-    def "testing isPublic method"() {
-        given:
-        User user = new User(email: "user@gmail.com", username: "dummyuser", password: "dummypassword", firstName: "FIRSTNAME",
-                lastName: "LASTNAME", admin: true, active: true, photo: "ABCD".getBytes())
-        user.save()
-        Topic topic = new Topic(name: "Dummy topic", visibility: Visibility.PUBLIC, createdBy: user)
-        when:
-        Boolean output = topic.isPublic()
-        then:
-        output == true
     }
 
 }

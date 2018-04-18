@@ -33,12 +33,14 @@
                         </div>
 
                         <div class="col-lg-10">
-                            <select class="form-control " name="topicName">
+                            <select class="form-control " name="topicNameDocument" >
                                 <g:each in="${session.user.getUserTopics()}" var="topicList">
                                     <option value="${topicList}">${topicList}</option>
                                 </g:each>
                             </select>
                         </div>
+
+                        %{--<g:hiddenField name="topicName" value="${get.resourceId}" />--}%
 
                     </div>
 

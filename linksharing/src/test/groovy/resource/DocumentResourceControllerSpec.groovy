@@ -8,7 +8,7 @@ import grails.test.mixin.TestFor
 import spock.lang.Specification
 import spock.lang.Unroll
 import topic.Topic
-
+/*
 //@TestFor(DocumentResourceController)
 //@Mock([ApplicationFilters, DocumentResource, Resource])
 class DocumentResourceControllerSpec extends Specification {
@@ -41,4 +41,4 @@ class DocumentResourceControllerSpec extends Specification {
     }
 
 
-}
+}*/

@@ -6,7 +6,6 @@ import spock.lang.Specification
 import spock.lang.Unroll
 import user.User
 
-@TestFor(User)
 class UserSpec extends Specification {
 
     private Log4JLogger logger = Mock(Log4JLogger)
@@ -50,7 +49,7 @@ class UserSpec extends Specification {
     def "Testing user constraints"() {
         setup:
         User user = new User(email: email, username: username, password: password, firstName: firstName, lastName: lastName, admin: admin, active: active, photo: photo,
-                confirmPassword: confirmPassword)
+                confirmpassword: confirmPassword)
 
         when:
         Boolean result = user.validate()
@@ -111,7 +110,7 @@ class UserSpec extends Specification {
 
         when:
 
-        Boolean output = user.saveInstance()
+        Boolean output = user.save()
 
         then:
         output == null
@@ -126,13 +125,13 @@ class UserSpec extends Specification {
                 lastName: "LASTNAME", admin: true, active: true, photo: "ABCD".getBytes())
         user.save()
         user.password = "112343443"
-        user.confirmPassword = "112343443"
+        user.confirmpassword = "112343443"
         user.log = logger
 
         logger.info(_) >> { true }
 
         when:
-        user.saveInstance()
+        user.save()
 
         then:
 

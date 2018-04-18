@@ -51,4 +51,17 @@ class SubscriptionService {
             return false
         }
     }
+
+    def subscribeThroughEmail(String topicName){
+        Topic inviteTopic = Topic.findByName(topicName)
+        Subscription subscription = new Subscription(user: session.user, topic: inviteTopic,seriousness: Seriousness.SERIOUS )
+        if(subscription.save(flush:true)){
+            log.info("Subscription added Successfully")
+            return true
+        }else{
+            log.error("Unable to add Subscription")
+            subscription.errors.allErrors.each {println it}
+            return false
+        }
+    }
 }

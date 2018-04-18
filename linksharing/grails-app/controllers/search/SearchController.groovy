@@ -15,6 +15,6 @@ class SearchController {
         else
             user = null
         Map map = searchService.showSearchResults(new String(params.searchObject), user)
-        render(view: 'search', model: [searchObject: new String(params.searchObject), searchResults: map.searchResults, topPostsList: map.topPostsList, trendingTopicsList: map.trendingTopicsList])
+        render(view: 'search', model: [searchObject: new String(params.searchObject), searchResults: map.searchResults, topPostsList: map.topPostsList, trendingTopicsList: map.trendingTopicsList,resourceList:map.resourceList])
     }
 }

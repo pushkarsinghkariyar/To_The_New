@@ -10,8 +10,8 @@ import spock.lang.Unroll
 import topic.Topic
 import user.User
 
-@TestFor(Subscription)
-@Mock([User, Topic])
+//@TestFor(Subscription)
+//@Mock([User, Topic])
 class SubscriptionSpec extends Specification {
 
     @Unroll
@@ -29,8 +29,8 @@ class SubscriptionSpec extends Specification {
         sno | topic       | user       | seriousness              | valid
         0   | new Topic() | new User() | Seriousness.CASUAL       | true
         1   | new Topic() | new User() | Seriousness.SERIOUS      | true
-        2   | new Topic() | new User() | Seriousness.VERY_SERIOUS | true
-        3   | null        | new User() | Seriousness.VERY_SERIOUS | false
+        2   | new Topic() | new User() | Seriousness.VERYSERIOUS | true
+        3   | null        | new User() | Seriousness.VERYSERIOUS | false
         4   | new Topic() | null       | Seriousness.SERIOUS      | false
         5   | new Topic() | new User() | null                     | false
 

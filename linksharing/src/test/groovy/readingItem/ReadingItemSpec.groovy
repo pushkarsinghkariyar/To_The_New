@@ -1,17 +1,13 @@
 package readingItem
 
-import grails.testing.gorm.DomainUnitTest
 import resource.DocumentResource
 import resource.LinkResource
-import spock.lang.Specification
-import grails.test.mixin.Mock
-import grails.test.mixin.TestFor
 import spock.lang.Specification
 import spock.lang.Unroll
 import user.User
 
-@TestFor(ReadingItem)
-@Mock([User])
+//@TestFor(ReadingItem)
+//@Mock([User])
 class ReadingItemSpec extends Specification {
 
     @Unroll

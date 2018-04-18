@@ -8,4 +8,5 @@ class InboxVO {
     String resourceDescription
     Integer readingItemId
     Integer resourceId
+    Boolean isLink
 }

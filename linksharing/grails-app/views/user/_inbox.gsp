@@ -22,10 +22,14 @@
                         <i class="fa fa-google fa-lg" aria-hidden="true"></i>
                         <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
                         <span class="pull-right" style="margin-right: 0px;color: #007efc">
-                            <g:link controller="download" action="index"
-                                    style="color: #007efc;font-size: small">Download</g:link>
-                            %{--<g:link action="/topic/show.gsp" params="${[topicId:unReadResources.resource.topic.id]}"--}%
-                                    %{--style="color: #007efc;font-size: small">View Full</g:link>--}%
+                            <g:if test="${unReadResourcesList.isLink}">
+                                <a href="${createLink(controller: 'resource',action: 'showLink', id:unReadResources.resourceId)}" controller="download" action="index"
+                                   style="color: #007efc">View Link</a>
+                            </g:if>
+                            <g:else>
+                                <a href="${createLink(controller: 'resource',action: 'downloadDocument', id:unReadResources.resourceId)}" controller="download" action="index"
+                                   style="color: #007efc">Download</a>
+                            </g:else>
                             <g:link controller="readingItem" action="changeisRead" params="${[id:unReadResources.readingItemId]}">Mark Read</g:link>
                             <a href="${createLink(controller:'resource',action:'showPost',id:unReadResources.resourceId)}">View Post</a>
                         </span>

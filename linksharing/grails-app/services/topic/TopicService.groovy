@@ -27,15 +27,21 @@ class TopicService {
             List<UserVO> subscribedUserList = []
             subscribedUsers.each {
                 subscribedUserList.add(new UserVO(name: it.user.getName(), username: it.user.username, subscriptionCount: it.user.subscriptions.size(),
-                        resourceCount: it.user.resources.size(),topicCount: it.user.topics.size()))
+                        resourceCount: it.user.resources.size(), topicCount: it.user.topics.size()))
             }
 
             List<Resource> resources = Resource.findAllByTopic(topic)
 
             List<ResourceVO> resourceList = []
+            Boolean isLink
             resources.each {
+                if (it.class == resource.LinkResource) {
+                    isLink = true
+                } else {
+                    isLink = false
+                }
                 resourceList.add(new ResourceVO(resourceId: it.id, topicId: topicId, resourceDescription: it.description,
-                        ownerName: it.createdBy.getName(), ownerUsername: it.createdBy.username, topicName: it.topic.name))
+                        ownerName: it.createdBy.getName(), ownerUsername: it.createdBy.username, topicName: it.topic.name,isLink: isLink))
             }
             def map = ["topicVO": topicVO, "subscribedUserList": subscribedUserList, "resourceList": resourceList]
             return map
@@ -43,29 +49,28 @@ class TopicService {
             return null
     }
 
-    def editTopicName(Map topicData){
+    def editTopicName(Map topicData) {
         Topic topic = Topic.findById(topicData.topicId)
-        topic.name= topicData.changedTopicName
-        if(topic.save(flush:true)){
+        topic.name = topicData.changedTopicName
+        if (topic.save(flush: true)) {
             log.info("Topic Name Changed Successfully : $topic")
             return true
-        }else
-        {
+        } else {
             log.error("Error Changing Topic Name : $topic")
-            topic.errors.allErrors.each {println it}
+            topic.errors.allErrors.each { println it }
             return false
         }
     }
 
-    def changeVisibility(Map topicData){
+    def changeVisibility(Map topicData) {
         Topic topic = Topic.findById(topicData.id)
-        topic.visibility= topicData.visibility
-        if(topic.save(flush:true)){
+        topic.visibility = topicData.visibility
+        if (topic.save(flush: true)) {
             log.info("Visibility Changed : $topic")
             return true
-        }else{
+        } else {
             log.error("Unable to Change Visibility : $topic")
-            topic.errors.allErrors.each {println it}
+            topic.errors.allErrors.each { println it }
             return false
         }
     }

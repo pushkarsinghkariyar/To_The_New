@@ -1,6 +1,7 @@
 package invitation
 
 import grails.plugins.mail.MailService
+import topic.Topic
 
 class InvitationController {
 
@@ -10,6 +11,9 @@ class InvitationController {
         println("printing params : " + params)
         println "InvitationController sendMail >> " + params.recieverEmail
         println "InvitationController bean >> " + mailService
+
+        //
+
         mailService.sendMail {
             to "${params.recieverEmail}"
             subject "Regarding Invitation For Topic : ${params.topicName}"
@@ -17,6 +21,7 @@ class InvitationController {
 <a href = "http://localhost:8080/subscription/subscribeThroughEmail')}">Click Here</a>
 """
         }
-        render "done"
+        flash.message= "invitation send successfully"
+        redirect(controller: 'user', action: 'index')
     }
 }

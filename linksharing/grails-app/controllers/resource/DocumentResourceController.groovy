@@ -19,13 +19,14 @@ class DocumentResourceController {
             documentInstance.createdBy = session.user
             documentInstance.description = params.documentResourceDescription
             println("about to find topic >>>>>>>>>>>>>>>>>>>>>>>>>>>")
-            Topic newtopic = Topic.findByName(params.topicName)
+            Topic newtopic = Topic.findByName(params.topicNameDocument)
             println("topic found : >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>. $newtopic")
             documentInstance.topic = newtopic
             file.transferTo(new File(documentInstance.filepath))
             println("about to save document >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>")
             if(documentInstance.save(flush:true)){
                 log.info("Document Saved Successfully : $documentInstance")
+                println "filepath >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>" +  documentInstance.filepath
             }else{
                 log.error("Unable to Save : $documentInstance")
                 documentInstance.errors.allErrors.each {println it}

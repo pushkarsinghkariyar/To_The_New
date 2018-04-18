@@ -7,10 +7,8 @@ import grails.test.mixin.Mock
 import grails.test.mixin.TestFor
 import spock.lang.Specification
 import user.User
+/*
 
-/**
- * See the API for {@link grails.test.mixin.web.ControllerUnitTestMixin} for usage instructions
- */
 @TestFor(LoginController)
 @Mock([User])
 class LoginControllerSpec extends Specification {
@@ -26,7 +24,7 @@ class LoginControllerSpec extends Specification {
         response.forwardedUrl == '/user/index'
     }
 
-    def "check if user session exists in index metho"() {
+    def "check if user session exists in index method"() {
         given: "a session user exists"
         session["user"] = null
 
@@ -86,4 +84,4 @@ class LoginControllerSpec extends Specification {
     }
 
 
-}
+}*/

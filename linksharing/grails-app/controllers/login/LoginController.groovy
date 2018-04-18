@@ -68,4 +68,8 @@ class LoginController {
         }
     }
 
+    def showforgotPasswordPage(){
+        render(view: 'forgotPassword')
+    }
+
 }

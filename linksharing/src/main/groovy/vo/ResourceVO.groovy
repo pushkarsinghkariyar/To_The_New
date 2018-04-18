@@ -10,6 +10,7 @@ class ResourceVO {
     String ownerName
     String ownerUsername
     String topicName
+    Boolean isLink
 
 
     @Override

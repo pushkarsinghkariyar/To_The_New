@@ -35,42 +35,87 @@
                         </div>
 
                     </div>
-                    <g:each in="${searchResults}" var="topic">
-                        <div class="panel-body  ">
-                            <div class="col-lg-12">
-                                <div class="col-sm-3">
-                                    <ls:userImage username="${topic.ownerUsername}" height="100" width="100"/>
-                                </div>
+                    %{--<g:each in="${searchResults}" var="topic">--}%
+                        %{--<div class="panel-body  ">--}%
+                            %{--<div class="col-lg-12">--}%
+                                %{--<div class="col-sm-3">--}%
+                                    %{--<ls:userImage username="${topic.ownerUsername}" height="100" width="100"/>--}%
+                                %{--</div>--}%
 
-                                <div class="col-lg-9">
-                                    <div class="col-sm-12">
-                                        <br>
+                                %{--<div class="col-lg-9">--}%
+                                    %{--<div class="col-sm-12">--}%
+                                        %{--<br>--}%
 
-                                        <span>${topic.ownerName} &nbsp;&nbsp;&nbsp;&nbsp;<small
-                                                class="text-muted">@${topic.ownerUsername}</small>
+                                        %{--<span>${topic.ownerName} &nbsp;&nbsp;&nbsp;&nbsp;<small--}%
+                                                %{--class="text-muted">@${topic.ownerUsername}</small>--}%
 
-                                            <a href="${createLink(controller:'topic',action: 'show',id: topic.topicId)}" class="pull-right">${topic.topicName}</a>
-                                            <br><br>
+                                            %{--<a href="${createLink(controller:'topic',action: 'show',id: topic.topicId)}" class="pull-right">${topic.topicName}</a>--}%
+                                            %{--<br><br>--}%
 
 
-                                        </span>
+                                        %{--</span>--}%
 
-                                        <div>
-                                            <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
-                                            <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
-                                            <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
-                                            <span class="pull-right" style="margin-right: 0px;color: #007efc">
-                                                <g:if test="${session.user}">
-                                                <a href="#" style="color: #007efc;font-size: 75%">Download</a>
-                                                </g:if>
-                                                <a href="${createLink(controller:'topic',action: 'show',id: topic.topicId)}" style="color: #007efc;font-size: 75%">View Topic</a>
-                                            </span>
-                                        </div>
-                                    </div>
+                                        %{--<div>--}%
+                                            %{--<i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>--}%
+                                            %{--<i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>--}%
+                                            %{--<i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>--}%
+                                            %{--<span class="pull-right" style="margin-right: 0px;color: #007efc">--}%
+                                                %{----}%
+                                                %{--<g:if test="${session.user}">--}%
+                                                %{--<a href="#" style="color: #007efc;font-size: 75%">Download</a>--}%
+                                                %{--</g:if>--}%
+                                                %{--<a href="${createLink(controller:'topic',action: 'show',id: topic.topicId)}" style="color: #007efc;font-size: 75%">View Topic</a>--}%
+                                            %{--</span>--}%
+                                        %{--</div>--}%
+                                    %{--</div>--}%
 
-                                </div>
+                                %{--</div>--}%
+                            %{--</div>--}%
+
+                        %{--</div>--}%
+                    %{--</g:each>--}%
+                    <g:each in="${resourceList}" var="resource">
+                        <div class="col-lg-12">
+                            <div class="col-sm-3">
+                                <ls:userImage username="${resource.ownerUsername}" height="100" width="100"/>
                             </div>
 
+                            <div class="col-lg-9">
+                                <div class="col-sm-12">
+                                    <br>
+
+                                    <span>${resource.ownerName} &nbsp;&nbsp;&nbsp;&nbsp;<small
+                                            class="text-muted">@${resource.ownerUsername}</small>
+
+                                        <a href="${createLink(controller: 'topic', action: 'show', id:resource.topicId)}" class="pull-right">${resource.topicName}</a>
+                                        <br><br>
+
+                                        <div class="col-lg-12">
+                                            <p>${resource.resourceDescription}</p>
+                                        </div>
+
+                                    </span>
+
+                                    <div>
+                                        <i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i>
+                                        <i class="fa fa-google-plus fa-lg" aria-hidden="true"></i>
+                                        <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
+                                        <span class="pull-right" style="margin-right: 0px;color: #007efc">
+                                            <g:if test="${resource.isLink}">
+                                                <a href="${createLink(controller:'resource',action:'showLink',id:resource.resourceId)}">View Link</a>
+                                            </g:if>
+                                            <g:else>
+                                                <a href="${createLink(controller:'resource',action:'downloadDocument',id:resource.resourceId)}">Download</a>
+                                            </g:else>
+                                            <a href="${createLink(controller: 'resource', action: 'showPost', id: resource.resourceId)}">View Post</a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <br>
                         </div>
                     </g:each>
                 </div>

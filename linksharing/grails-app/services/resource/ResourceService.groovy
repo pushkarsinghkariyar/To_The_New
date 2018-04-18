@@ -13,6 +13,7 @@ class ResourceService {
     }
 
     def saveLinkResource(Map linkResourceData) {
+        println "printing params >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>." + linkResourceData
         Resource linkResource = new LinkResource(createdBy: linkResourceData.createdBy, description: linkResourceData.linkTopicDescription, topic: Topic.findByName(linkResourceData.topicName), url: linkResourceData.link)
         if (linkResource.save(flush: true)) {
             log.info("Saved Successfully : $linkResource")
@@ -37,10 +38,16 @@ class ResourceService {
 
     def showResourcePage(Long resourceId) {
         Resource resource = Resource.findById(resourceId)
+        Boolean isLink
         if (resource) {
+            if (resource.class == resource.LinkResource) {
+                isLink = true
+            } else {
+                isLink = false
+            }
             ResourceVO resourceVO = new ResourceVO(resourceId: resourceId, topicId: resource.topic.id,
                     resourceDescription: resource.description, ownerName: resource.createdBy.getName(),
-                    ownerUsername: resource.createdBy.username, topicName: resource.topic.name)
+                    ownerUsername: resource.createdBy.username, topicName: resource.topic.name, isLink: isLink)
             return resourceVO
         } else
             return null

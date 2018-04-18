@@ -54,7 +54,7 @@ class ResourceController {
     }
 
     def storeRating() {
-        Map map = [score: params.star,ratedBy: session.user, resourceId: params.id]
+        Map map = [score: new Integer(params.star),ratedBy: session.user, resourceId: params.id]
         if (resourceService.saveRating(map)) {
             flash.message = "Saved Succesfully"
         } else {
@@ -101,6 +101,14 @@ class ResourceController {
         }
         redirect (controller: 'user', action: 'index')
 
+    }
+
+    def showLink(){
+        LinkResource linkResource = Resource.get(params.id)
+        if(linkResource){
+            redirect(url: "${linkResource.url}")
+            //render("Description - ${linkResource.description}")
+        }
     }
 
 }

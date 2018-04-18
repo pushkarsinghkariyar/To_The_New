@@ -89,7 +89,12 @@
                                 <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i>
                                 <span class="pull-right" style="margin-right: 0px;color: #007efc">
                                     <g:if test="${session.user}">
-                                        <a href="#" style="color: #007efc;font-size: 90%">Download</a>
+                                        <g:if test="${resource.isLink}">
+                                            <a href="${createLink(controller:'resource',action:'showLink',id:resource.resourceId)}">View Link</a>
+                                        </g:if>
+                                        <g:else>
+                                            <a href="${createLink(controller:'resource',action:'downloadDocument',id:resource.resourceId)}">Download</a>
+                                        </g:else>
                                     </g:if>
                                 </span>
                             </div>

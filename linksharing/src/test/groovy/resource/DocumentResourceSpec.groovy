@@ -9,7 +9,7 @@ import spock.lang.Unroll
 import topic.Topic
 import user.User
 
-@TestFor(DocumentResource)
+//@TestFor(DocumentResource)
 class DocumentResourceSpec extends Specification {
 
     @Unroll

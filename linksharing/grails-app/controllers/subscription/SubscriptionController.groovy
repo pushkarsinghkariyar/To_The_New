@@ -56,4 +56,12 @@ class SubscriptionController {
         }
         redirect(controller: 'user', action: 'editProfile')
     }
+
+    def subscribeThroughEmail(){
+        println ">>>>>>>>>>>>>>>>>>>>>>>>>>>>" + params
+        if(subscriptionService.subscribeThroughEmail(params.id)){
+            flash.message= "subscription done"
+        }else
+            flash.error= "not able to subscribe"
+    }
 }

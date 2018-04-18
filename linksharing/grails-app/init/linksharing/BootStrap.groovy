@@ -354,8 +354,10 @@ class BootStrap {
                         temp.addToResources(documentResource)
                         temp.createdBy.addToResources(documentResource)
                         log.info("Saved Successfully : $documentResource")
-                    } else
+                    } else {
                         log.error("Error while saving : $documentResource")
+                        documentResource.errors.allErrors.each {println it}
+                    }
                 }
             }
             temp.save(flush: true)
